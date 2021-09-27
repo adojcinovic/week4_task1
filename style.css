@@ -179,7 +179,8 @@ button {
     .container {
         background-image: linear-gradient(hsla(224, 35%, 11%, 0.85), hsla(224, 35%, 11%, 0.85)), url(./starter-code/assets/mobile/image-host.jpg);
         margin: 0;
-        background-size: contain;
+        background-size: cover;
+        height: 100vh;
     }
     .logo {
         margin-top: 60px;
