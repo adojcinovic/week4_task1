@@ -72,24 +72,47 @@ body {
             display: flex;
             justify-content: space-between;
             border-radius: 28px;
-            width: 55%;
+            width: 65%;
         }
         .input .req {
             background-color: var(--light-green);
             color: var(--navy-blue);
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 28px;
             padding-left: 20px;
             padding-right: 20px;
-            width: 40%;
+            width: 43%;
         }
+            .input button:hover {
+                background-color: #B3FFE2;
+            }
         .input .email {
             padding-left: 20px;
             padding-right: 20px;
-            width: 65%;
+            width: 60%;
         }
         .input .email::placeholder {
             color: var(--white);
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 28px;
         }
 
+        .message {
+            color: #FB3E3E;
+            margin-top: -5%;
+            display: none;
+        }
+        .message_show {
+            display: block;
+            color: #FB3E3E;
+            margin-top: -5%;
+        }
+
+        .logos img {
+            width: 20%;
+        }
 input {
     border: none;
     border-radius: 28px;
@@ -133,12 +156,20 @@ button {
     }
     .right img {
         position: absolute;
-        left: 1em;
-        bottom: -2em;
+        left: 2em;
+        margin-top: 10rem;
+    }
+
+    .logo {
+        margin-left: 30px;
     }
     .form {
         height: 70%;
+        margin-left: 30px;
     }
+        .input {
+            width: 58%;
+        }
 }
 
 @media screen and (max-width: 815px) {
