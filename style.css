@@ -90,6 +90,8 @@ body {
         .input .email {
             padding-left: 20px;
             padding-right: 20px;
+            padding-top: 17px;
+            padding-bottom: 17px;
             width: 60%;
         }
         .input .email::placeholder {
@@ -102,12 +104,13 @@ body {
         .message {
             color: #FB3E3E;
             margin-top: -5%;
-            display: none;
+            visibility: hidden;
+            min-height: 30px;
         }
         .message_show {
-            display: block;
+            visibility: visible;
             color: #FB3E3E;
-            margin-top: -5%;
+            min-height: 30px;
         }
 
         .logos img {
@@ -175,6 +178,8 @@ button {
 @media screen and (max-width: 815px) {
     .container {
         background-image: linear-gradient(hsla(224, 35%, 11%, 0.85), hsla(224, 35%, 11%, 0.85)), url(./starter-code/assets/mobile/image-host.jpg);
+        margin: 0;
+        background-size: contain;
     }
     .logo {
         margin-top: 60px;
@@ -195,6 +200,7 @@ button {
         justify-content: space-evenly;
         align-items: center;
         background-color: transparent;
+        margin: 0;
     }
     .title {
         order: 1;
