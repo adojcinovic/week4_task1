@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --light-green: #54E6AF;
+    --navy-blue: #2C344B;
+    --blackish: #121725;
+    --white: #FFFFFF;
+    --grayish: #5A668A;
+    --gray: #C2CBE5;
+}
+
+body {
+    background-color: var(--blackish);
+    font-family: 'Chivo', sans-serif;
+}
+
+.container {
+    margin-top: 100px;
+    background-image: url(./starter-code/assets/desktop/image-host.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: 40rem;
+}
+
+    .left {
+        height: 100%;
+        width: 50%;
+        margin-left: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: -2%;
+    }
+
+    .form {
+        width: 100%;
+        height: 80%;
+        background-color: var(--blackish);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+        .title {
+            color: var(--light-green);
+            font-size: 52px;
+            line-height: 62px;
+        }
+        .description {
+            color: var(--gray);
+            font-size: 18px;
+            line-height: 28px;
+            width: 62%;
+        }
+        .input {
+            background-color: var(--grayish);
+            width: 45%;
+            padding: 3px;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 28px;
+            width: 55%;
+        }
+        .input .req {
+            background-color: var(--light-green);
+            color: var(--navy-blue);
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 40%;
+        }
+        .input .email {
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 65%;
+        }
+        .input .email::placeholder {
+            color: var(--white);
+        }
+
+input {
+    border: none;
+    border-radius: 28px;
+    padding: 10px;
+    background-color: var(--grayish);
+}
+button {
+    border: none;
+    border-radius: 28px;
+    padding: 10px;
+    background-color: var(--grayish);
+    color: white;
+    cursor: pointer;
+}
+.right img {
+    margin-bottom: -23%;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+@media screen and (max-width: 1100px) {
+    .container {
+        margin-top: 100px;
+        background-image: url(./starter-code/assets/tablet/image-host.jpg);
+        background-repeat: no-repeat;
+        background-position: right;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        height: 40rem;
+    }
+    .left {
+        width: 80%;
+        margin: 0;
+    }
+    .right img {
+        position: absolute;
+        left: 1em;
+        bottom: -2em;
+    }
+    .form {
+        height: 70%;
+    }
+}
+
+@media screen and (max-width: 815px) {
+    .container {
+        background-image: linear-gradient(hsla(224, 35%, 11%, 0.85), hsla(224, 35%, 11%, 0.85)), url(./starter-code/assets/mobile/image-host.jpg);
+    }
+    .logo {
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+    .right {
+        display: none;
+    }
+
+    .left {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .form {
+        width: 100%;
+        height: 85%;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: transparent;
+    }
+    .title {
+        order: 1;
+        width: 90%;
+        text-align: center;
+        font-size: 26px;
+        line-height: 38px;
+    }
+    .description {
+        order: 2;
+        width: 90%;
+        text-align: center;
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .logos {
+        order: 3;
+        width: 90%;
+    }
+    .input {
+        order: 4;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+    }
+        .input .email {
+            width: 90%;
+        }
+        .input .req {
+            width: 90%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+
+    .logos img {
+        width: 20%;
+    }
+}
