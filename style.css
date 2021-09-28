@@ -19,7 +19,8 @@ body {
 }
 
 .container {
-    margin-top: 100px;
+    margin-top: 130px;
+    margin-bottom: 130px;
     background-image: url(./starter-code/assets/desktop/image-host.jpg);
     background-repeat: no-repeat;
     background-position: right;
@@ -32,7 +33,7 @@ body {
 
     .left {
         height: 100%;
-        width: 50%;
+        max-width: 723px;
         margin-left: 10%;
         display: flex;
         flex-direction: column;
@@ -47,8 +48,9 @@ body {
     }
 
     .form {
-        width: 100%;
-        height: 80%;
+        height: auto;
+        padding-top: 88px;
+        padding-right: 58px;
         background-color: var(--blackish);
         display: flex;
         flex-direction: column;
@@ -58,45 +60,48 @@ body {
             color: var(--light-green);
             font-size: 52px;
             line-height: 62px;
+            margin-bottom: 24px;
+            max-width: 665px;
         }
         .description {
             color: var(--gray);
             font-size: 18px;
             line-height: 28px;
-            width: 62%;
+            max-width: 445px;
+            margin-bottom: 24px;
         }
         .input {
             background-color: var(--grayish);
-            width: 45%;
-            padding: 3px;
+            margin-bottom: 64px;
             display: flex;
             justify-content: space-between;
             border-radius: 28px;
-            width: 65%;
+            max-width: 427px;
         }
         .input .req {
             background-color: var(--light-green);
             color: var(--navy-blue);
             font-size: 14px;
-            font-weight: bold;
+            font-weight: 400;
             line-height: 28px;
-            padding-left: 20px;
-            padding-right: 20px;
-            width: 43%;
+            padding-top: 9px;
+            padding-bottom: 9px;
+            padding-left: 27px;
+            padding-right: 27px;
+            font-family: 'Chivo', sans-serif;
         }
             .input button:hover {
                 background-color: #B3FFE2;
             }
         .input .email {
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-top: 17px;
-            padding-bottom: 17px;
-            width: 60%;
+            padding-left: 32px;
+            padding-top: 14px;
+            padding-bottom: 14px;
         }
         .input .email::placeholder {
+            font-family: 'Chivo', sans-serif;
             color: var(--white);
-            font-weight: bold;
+            font-weight: 400;
             font-size: 14px;
             line-height: 28px;
         }
@@ -112,10 +117,8 @@ body {
             color: #FB3E3E;
             min-height: 30px;
         }
+        
 
-        .logos img {
-            width: 20%;
-        }
 input {
     border: none;
     border-radius: 28px;
@@ -138,12 +141,11 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 70%;
+    max-width: 536px;
 }
 
 @media screen and (max-width: 1100px) {
     .container {
-        margin-top: 100px;
         background-image: url(./starter-code/assets/tablet/image-host.jpg);
         background-repeat: no-repeat;
         background-position: right;
@@ -154,7 +156,8 @@ button {
         height: 40rem;
     }
     .left {
-        width: 80%;
+        margin-left: 39px;
+        max-width: 635px;
         margin: 0;
     }
     .right img {
@@ -165,80 +168,93 @@ button {
 
     .logo {
         margin-left: 30px;
+        margin-top: 50px;
     }
     .form {
-        height: 70%;
+        height: auto;
+        max-width: 635px;
         margin-left: 30px;
     }
+        .description {
+            max-width: 445px;
+        }
         .input {
-            width: 58%;
+            max-width: 427px;
+        }
+        .logos {
+            max-width: 536px;
         }
 }
 
-@media screen and (max-width: 815px) {
+@media screen and (max-width: 767px) {
     .container {
         background-image: linear-gradient(hsla(224, 35%, 11%, 0.85), hsla(224, 35%, 11%, 0.85)), url(./starter-code/assets/mobile/image-host.jpg);
         margin: 0;
         background-size: cover;
         height: 100vh;
     }
-    .logo {
-        margin-top: 60px;
-        margin-bottom: 20px;
-    }
     .right {
         display: none;
     }
 
+    .logo {
+        margin-top: 62px;
+        margin-bottom: 57px;
+    }
+
     .left {
+        height: auto;
+        padding: 0;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        max-width: 327px;
+        margin: 0 auto;
     }
     .form {
-        width: 100%;
-        height: 85%;
         justify-content: space-evenly;
         align-items: center;
         background-color: transparent;
-        margin: 0;
+        padding-top: 0;
+        padding-right: 0;
+        margin-left: 24px;
+        margin-right: 24px;
     }
     .title {
         order: 1;
-        width: 90%;
         text-align: center;
         font-size: 26px;
         line-height: 38px;
+        margin-bottom: 16px;
     }
     .description {
         order: 2;
-        width: 90%;
         text-align: center;
         font-size: 15px;
         line-height: 25px;
+        margin-bottom: 33px;
     }
     .logos {
         order: 3;
-        width: 90%;
+        margin-bottom: 48px;
+        max-width: 315px;
+    }
+    .logos img {
+        max-width: 20%;
     }
     .input {
         order: 4;
-        width: 100%;
         flex-direction: column;
         align-items: center;
         background-color: transparent;
+        width: 100%;
     }
         .input .email {
-            width: 90%;
+            width: 100%;
+            margin-bottom: 16px;
         }
         .input .req {
-            width: 90%;
             margin-top: 10px;
             margin-bottom: 10px;
+            width: 100%;
         }
-
-
-    .logos img {
-        width: 20%;
-    }
 }
